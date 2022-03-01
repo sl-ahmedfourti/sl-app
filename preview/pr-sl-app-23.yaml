@@ -10,7 +10,7 @@ spec:
   destination:
     namespace: pr-sl-app-23
     server: https://kubernetes.default.svc
-  project: previews
+  project: sl-app
   source:
     helm:
       values: |

@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: previews
+  project: sl-app
   source:
     path: preview
     repoURL: https://github.com/sl-ahmedfourti/sl-app.git
