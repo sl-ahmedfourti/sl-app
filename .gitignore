@@ -1,0 +1,10 @@
+**/*.sw?
+terraform/bootstrap/.terraform/**
+*.tfstate*
+**/.terraform/**
+**/.terragrunt-cache/**
+.idea_modules
+*.iml
+*.iws
+*.ipr
+.idea/
