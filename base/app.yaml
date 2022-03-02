@@ -2,8 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: slapp
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  namespace: sl-app
 spec:
   destination:
     namespace: sl-app
