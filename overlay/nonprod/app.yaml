@@ -11,5 +11,5 @@ spec:
     helm:
       values: |
         replicaCount: 1
-        service
+        service:
           type: ClusterIP
