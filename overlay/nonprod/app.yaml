@@ -6,7 +6,6 @@ metadata:
 spec:
   destination:
     name: in-cluster
-  project: sl-app
   source:
     helm:
       values: |
