@@ -1,0 +1,7 @@
+# Order is important, very important !
+resources:
+  - ../../base
+patchesStrategicMerge:
+  - app.yaml
+
+nameSuffix: -prod
