@@ -1,6 +1,6 @@
 # Order is important, very important !
 resources:
-  - ../../base/app/yaml
+  - ../../base/app.yaml
 patchesStrategicMerge:
   - app.yaml
 
