@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test
+  name: slapp
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sl-app
+    namespace: argocd
   project: sl-app
   source:
     repoURL: https://charts.bitnami.com/bitnami
