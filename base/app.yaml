@@ -2,10 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: slapp
-  namespace: sl-app
 spec:
   destination:
-    namespace: sl-app
+    namespace: sl-app-ns
   project: sl-app
   source:
     repoURL: https://charts.bitnami.com/bitnami
