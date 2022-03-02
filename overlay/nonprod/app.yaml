@@ -6,6 +6,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
+    namespace: sl-app-nonprod
     name: in-cluster
   source:
     helm:

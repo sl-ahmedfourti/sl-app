@@ -4,8 +4,6 @@ metadata:
   name: slapp
   namespace: argocd
 spec:
-  destination:
-    namespace: sl-app
   project: sl-app
   source:
     repoURL: https://charts.bitnami.com/bitnami
