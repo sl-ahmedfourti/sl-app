@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: slapp-nonprod
+  name: slapp
 spec:
   destination:
     name: in-cluster
