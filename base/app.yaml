@@ -6,7 +6,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sl-app
+    namespace: sl-app-ns
   project: sl-app
   source:
     repoURL: https://charts.bitnami.com/bitnami
