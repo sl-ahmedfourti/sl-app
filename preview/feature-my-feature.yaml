@@ -18,6 +18,8 @@ spec:
         image:
           tag: "1.21.3-debian-10-r48"
         replicaCount: 2
+        service:
+          type: ClusterIP
       version: v3
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 9.7.5
