@@ -2,6 +2,6 @@
 resources:
   - ../../base
 patchesStrategicMerge:
-  - app.yaml.bak
+  - app.yaml
 
 nameSuffix: -nonprod
