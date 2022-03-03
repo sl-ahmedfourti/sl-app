@@ -2,3 +2,4 @@
 resources:
   - overlay/nonprod
   - overlay/prod
+  - preview

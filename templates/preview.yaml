@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: "{{.APP_ID}}"
+  name: "{{.PR_NAME}}"
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: sl-app
   source:
-    path: preview
-    repoURL: https://github.com/sl-ahmedfourti/sl-app.git
-    targetRevision: HEAD
+    repoURL: https://charts.bitnami.com/bitnami
+    chart: nginx
+    targetRevision: 9.7.5
     helm:
       values: |
         image:
@@ -18,8 +18,8 @@ spec:
         replicaCount: 2
       version: v3
   destination:
-    namespace: "{{.APP_ID}}"
-    server: https://kubernetes.default.svc
+    namespace: "{{.APP_NAME}}"
+    name: nonprod
   syncPolicy:
     automated:
       selfHeal: true
