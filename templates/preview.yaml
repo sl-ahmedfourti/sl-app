@@ -16,6 +16,8 @@ spec:
         image:
           tag: "{{.IMAGE_TAG}}"
         replicaCount: 2
+        service:
+          type: ClusterIP
       version: v3
   destination:
     namespace: "{{.PR_NAME}}"
