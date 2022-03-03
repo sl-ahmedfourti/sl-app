@@ -18,7 +18,7 @@ spec:
         replicaCount: 2
       version: v3
   destination:
-    namespace: "{{.APP_NAME}}"
+    namespace: "{{.PR_NAME}}"
     name: nonprod
   syncPolicy:
     automated:
