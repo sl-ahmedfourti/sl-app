@@ -8,7 +8,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: in-cluster
+    name: nonprod
     namespace: feature-my-feature
   project: sl-app
   source:
