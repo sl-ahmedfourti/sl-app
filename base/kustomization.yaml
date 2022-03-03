@@ -1,3 +1,7 @@
 # Order is important, very important !
-resources:
-  - app.yaml
+helmCharts:
+  - name: nginx
+    repo: https://charts.bitnami.com/bitnami
+    version: 9.7.5
+    releaseName: nginx
+    valuesFile: values.yaml
