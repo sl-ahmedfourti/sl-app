@@ -1,0 +1,31 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  name: feature-shopping
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: feature-shopping
+  project: sl-app
+  source:
+    chart: nginx
+    helm:
+      values: |
+        image:
+          tag: "1.21.3-debian-10-r48"
+        replicaCount: 2
+        service:
+          type: ClusterIP
+      version: v3
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 9.7.5
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
