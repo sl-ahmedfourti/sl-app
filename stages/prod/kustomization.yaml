@@ -8,5 +8,5 @@ helmCharts:
     repo: https://charts.bitnami.com/bitnami
     version: 9.7.5
     releaseName: nginx
-    namespace: sl-app-prod
+    namespace: slapp-prod
     valuesFile: values-prod.yaml

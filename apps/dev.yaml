@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   namespace: argocd
-  name: dev-a
+  name: slapp-dev
   # cascade deletes
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -16,8 +16,7 @@ spec:
     path: stages/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
-
+    namespace: slapp-dev
   syncPolicy:
     automated:
       prune: true
