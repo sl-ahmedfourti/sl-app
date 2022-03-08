@@ -1,0 +1,23 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  name: feature-fixargocdci
+  namespace: argocd
+spec:
+  destination:
+    namespace: feature-fixargocdci
+    server: https://kubernetes.default.svc
+  project: sl-app
+  source:
+    path: stages/preview/feature-fixargocdci
+    repoURL: https://github.com/sl-ahmedfourti/sl-app.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
