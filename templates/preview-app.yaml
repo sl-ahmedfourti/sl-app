@@ -5,6 +5,8 @@ metadata:
   name: "{{.PR_NAME}}"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  labels:
+    github-branch : "{{.GITHUB_BRANCH_NAME}}"
 spec:
   project: sl-app
 
