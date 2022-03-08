@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  namespace: argocd
+  name: "{{.PR_NAME}}"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: sl-app
+
+  source:
+    repoURL: https://github.com/sl-ahmedfourti/sl-app.git
+    targetRevision: HEAD
+    path: stages/preview/{{.PR_NAME}}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: "{{.PR_NAME}}"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

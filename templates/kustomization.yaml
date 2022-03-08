@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+nameSuffix: -preview
+
+helmCharts:
+  - name: nginx
+    repo: https://charts.bitnami.com/bitnami
+    version: 9.7.5
+    releaseName: nginx
+    namespace: "{{.PR_NAME}}"
+    valuesInline:
+      replicaCount: 2
+      service:
+        type: ClusterIP
+      image:
+        tag: "{{.IMAGE_TAG}}"
