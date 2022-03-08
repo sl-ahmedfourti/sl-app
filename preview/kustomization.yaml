@@ -6,3 +6,4 @@ kind: Kustomization
 resources:
 - ./feature-addhelmcharts.yaml
 - ./feature-fixci.yaml
+- ./feature-fixargocd.yaml
